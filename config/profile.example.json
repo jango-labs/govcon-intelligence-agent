@@ -1,0 +1,69 @@
+{
+  "profileName": "Example IT-modernization profile",
+  "timezone": "America/New_York",
+  "schedule": "0 6 * * *",
+  "windowMonths": 24,
+
+  "scope": {
+    "departments": ["DoD", "DHS", "DOJ", "HHS", "VA"],
+    "excludeComponents": [],
+    "otherAgencyForecasts": true
+  },
+
+  "filters": {
+    "naics": ["541511", "541512", "541513", "541519", "518210", "541330", "541690", "541715"],
+    "naicsMode": "prefer",
+    "noticeTypes": [],
+    "setAsides": [],
+    "vehicles": [],
+    "minValueUsd": null
+  },
+
+  "keywords": [
+    { "term": "cloud migration", "category": "Cloud & Modernization", "synonyms": ["migrate to the cloud", "cloud migrations"] },
+    { "term": "cloud modernization", "category": "Cloud & Modernization", "synonyms": ["cloud moderni[sz]ation"] },
+    { "term": "application modernization", "category": "Cloud & Modernization", "synonyms": ["legacy application moderni[sz]ation", "app moderni[sz]ation"] },
+    { "term": "systems integration", "category": "Cloud & Modernization", "synonyms": ["system integration", "systems integrator"] },
+    { "term": "enterprise IT", "category": "Cloud & Modernization", "synonyms": ["enterprise information technology"] },
+    { "term": "IT operations", "category": "IT Operations", "synonyms": ["information technology operations", "IT O&M"] },
+    { "term": "help desk", "category": "IT Operations", "synonyms": ["service desk"] },
+    { "term": "cybersecurity", "category": "Cyber & Identity", "synonyms": ["cyber security", "cyber-security"] },
+    { "term": "zero trust", "category": "Cyber & Identity" },
+    { "term": "identity management", "category": "Cyber & Identity", "synonyms": ["identity and access management", "IAM"] },
+    { "term": "continuous monitoring", "category": "Cyber & Identity", "synonyms": ["CDM"] },
+    { "term": "data analytics", "category": "Data & Analytics", "synonyms": ["analytics platform"] },
+    { "term": "data management", "category": "Data & Analytics" },
+    { "term": "data platform", "category": "Data & Analytics", "synonyms": ["data lake", "data warehouse"] },
+    { "term": "business intelligence", "category": "Data & Analytics" },
+    { "term": "artificial intelligence", "category": "AI & Automation", "synonyms": ["AI", "machine learning", "AI/ML"], "exclusions": ["air intelligence"] },
+    { "term": "robotic process automation", "category": "AI & Automation", "synonyms": ["RPA"] },
+    { "term": "intelligent automation", "category": "AI & Automation", "synonyms": ["hyperautomation"] },
+    { "term": "DevSecOps", "category": "Software & DevSecOps", "synonyms": ["DevOps", "dev sec ops"] },
+    { "term": "software development", "category": "Software & DevSecOps", "synonyms": ["agile software", "custom software"] },
+    { "term": "case management", "category": "Mission Operations", "synonyms": ["case management system"] },
+    { "term": "workflow automation", "category": "Mission Operations" },
+    { "term": "health IT", "category": "Health IT", "synonyms": ["health information technology", "healthcare IT"] },
+    { "term": "electronic health record", "category": "Health IT", "synonyms": ["EHR"] }
+  ],
+
+  "relevance": { "threshold": 25, "evidence": "strong", "reviewNaicsForecasts": true },
+
+  "priority": {
+    "weights": { "relevance": 30, "value": 20, "timeline": 15, "recompete": 15, "maturity": 10, "agency": 10 },
+    "thresholds": { "high": 76, "medium": 64, "low": 52 }
+  },
+
+  "derive": { "rfpLeadMonths": 6, "minExpiry": null },
+  "changeThresholds": { "dateShiftDays": 14, "valueChangePct": 20 },
+
+  "sources": {
+    "sam": { "enabled": true, "lookbackDays": 364, "maxCalls": 60, "fetchDescriptions": 20 },
+    "usaspending": { "enabled": true, "expiringContracts": true, "maxCalls": 40, "expiringWithinMonths": 24, "maxKeywords": 12, "lookbackYears": 6 },
+    "gsaForecast": { "enabled": true, "maxPages": 160 },
+    "gao": { "enabled": true },
+    "csvImports": { "enabled": true, "files": [] },
+    "plugins": []
+  },
+
+  "llm": { "provider": "none", "model": "", "monthlyCapUsd": 0 }
+}

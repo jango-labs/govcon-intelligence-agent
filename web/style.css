@@ -1,0 +1,35 @@
+:root { --bg:#f6f7f9; --card:#fff; --ink:#1b2430; --mute:#5b6675; --line:#dfe3e8; --brand:#1f3a5f; --accent:#0f766e; --warn:#b45309; --bad:#b91c1c; --good:#166534; }
+@media (prefers-color-scheme: dark) { :root { --bg:#10151c; --card:#18202a; --ink:#e6ebf1; --mute:#9aa7b6; --line:#2a3544; --brand:#7aa2d6; --accent:#34b3a6; --warn:#e0a458; --bad:#f08a8a; --good:#77d19a; } }
+* { box-sizing: border-box; }
+body { margin:0; font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+header { display:flex; flex-wrap:wrap; gap:10px 14px; align-items:center; padding:12px 20px; background:var(--card); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:5; }
+h1 { font-size:16px; margin:0; color:var(--brand); }
+nav { margin-left:auto; display:flex; gap:4px; }
+nav button { border:0; background:none; padding:7px 12px; border-radius:6px; color:var(--mute); cursor:pointer; font:inherit; }
+nav button.on { background:var(--brand); color:#fff; }
+.pill { font-size:12px; padding:2px 9px; border-radius:999px; background:var(--line); color:var(--mute); }
+.pill.demo { background:#fde68a; color:#7c2d12; } .pill.ok { background:#dcfce7; color:var(--good); } .pill.warn { background:#fef3c7; color:var(--warn); } .pill.bad { background:#fee2e2; color:var(--bad); }
+main { max-width:1280px; margin:0 auto; padding:18px 20px 60px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin-bottom:16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+.card h3 { margin:0 0 8px; font-size:13px; color:var(--mute); font-weight:600; text-transform:uppercase; letter-spacing:.04em; }
+.big { font-size:28px; font-weight:700; color:var(--brand); }
+table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+th,td { padding:8px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+th { font-size:12px; color:var(--mute); background:var(--bg); }
+tr.row { cursor:pointer; } tr.row:hover { background:var(--bg); }
+.tablewrap { overflow-x:auto; }
+.bar { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
+input,select,textarea,button.btn { font:inherit; padding:7px 10px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--ink); }
+button.btn { background:var(--brand); color:#fff; border-color:var(--brand); cursor:pointer; } button.btn:disabled { opacity:.5; cursor:default; }
+.tag { font-size:11px; padding:1px 7px; border-radius:999px; background:var(--line); } .High { background:#dcfce7; color:var(--good); font-weight:700; } .Medium { background:#dbeafe; color:#1e40af; }
+.est { color:var(--warn); } .mute { color:var(--mute); }
+#drawer { position:fixed; right:0; top:0; bottom:0; width:min(560px,100%); background:var(--card); border-left:1px solid var(--line); padding:18px; overflow:auto; z-index:10; box-shadow:-8px 0 24px rgba(0,0,0,.15); }
+#drawer h2 { margin:0 28px 8px 0; font-size:16px; } #drawer .close { position:absolute; right:12px; top:10px; }
+.kv { display:grid; grid-template-columns:150px 1fr; gap:4px 12px; margin:10px 0; } .kv dt { color:var(--mute); } .kv dd { margin:0; overflow-wrap:anywhere; }
+pre.answer { white-space:pre-wrap; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px; font:13px/1.5 ui-monospace,Menlo,Consolas,monospace; }
+.comp { display:grid; grid-template-columns:140px 1fr 40px; gap:8px; align-items:center; margin:4px 0; } .meter { height:8px; background:var(--line); border-radius:4px; overflow:hidden; } .meter i { display:block; height:100%; background:var(--accent); }
+footer { text-align:center; color:var(--mute); font-size:12px; padding:20px; }
+.login { max-width:340px; margin:15vh auto; padding:20px; } .login label { display:block; margin:12px 0; } .login input { width:100%; } .err { color:var(--bad); }
+a { color:var(--brand); }
+@media (max-width:640px) { header { padding:10px 12px; } main { padding:12px; } nav { margin-left:0; width:100%; overflow-x:auto; } }

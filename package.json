@@ -1,0 +1,36 @@
+{
+  "name": "govcon-intelligence-agent",
+  "version": "0.9.0",
+  "description": "Open-source federal contracting (GovCon) opportunity intelligence agent: discovers opportunities from public sources, scores them, and writes a daily Excel report.",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "engines": { "node": ">=24" },
+  "bin": { "govcon": "bin/govcon.mjs" },
+  "scripts": {
+    "govcon": "node bin/govcon.mjs",
+    "setup": "node bin/govcon.mjs setup",
+    "doctor": "node bin/govcon.mjs doctor",
+    "demo": "node bin/govcon.mjs demo",
+    "run": "node bin/govcon.mjs run",
+    "ask": "node bin/govcon.mjs ask",
+    "serve": "node bin/govcon.mjs serve",
+    "daemon": "node bin/govcon.mjs daemon",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "scan:secrets": "node scripts/scan-secrets.mjs",
+    "audit": "npm audit --omit=dev"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  },
+  "keywords": ["govcon", "federal-contracting", "sam-gov", "usaspending", "opportunity-intelligence", "excel-report"]
+}

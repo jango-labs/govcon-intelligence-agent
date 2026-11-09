@@ -1,0 +1,59 @@
+# dependencies / build
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# secrets and local configuration (NEVER commit)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa*
+*.token
+secrets/
+credentials*.json
+service-account*.json
+.npmrc
+.netrc
+
+# local state: databases, reports, caches, logs
+data/*
+!data/sample/
+!data/sample/**
+config/profile.json
+config/local.*
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.log
+logs/
+reports/
+out/
+tmp/
+.cache/
+
+# real Excel/Word/PDF working files (the committed demo report lives in examples/)
+*.xlsx
+!examples/*.xlsx
+*.docx
+*.pdf
+~$*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# scheduler files generated for a specific machine
+*.plist
+!docs/**/*.plist
+govcon-agent.service
+govcon-agent.timer

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf" content="__CSRF__">
+<meta name="mode" content="__MODE__">
+<title>GovCon Intelligence Agent</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <h1>GovCon Intelligence Agent</h1>
+  <span id="mode" class="pill"></span>
+  <span id="runpill" class="pill"></span>
+  <nav id="tabs">
+    <button data-tab="overview" class="on">Overview</button>
+    <button data-tab="opps">Opportunities</button>
+    <button data-tab="ask">Ask</button>
+    <button data-tab="reports">Reports</button>
+  </nav>
+</header>
+<main>
+  <section id="overview"></section>
+  <section id="opps" hidden></section>
+  <section id="ask" hidden></section>
+  <section id="reports" hidden></section>
+</main>
+<aside id="drawer" hidden></aside>
+<footer>Not affiliated with or endorsed by the U.S. Government. Estimates are not commitments; verify at the source.</footer>
+<script src="/app.js"></script>
+</body>
+</html>

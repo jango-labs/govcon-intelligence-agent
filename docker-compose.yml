@@ -1,0 +1,19 @@
+# EXPERIMENTAL: not yet tested by the maintainers.
+# The UI is published ONLY on the host's loopback interface. Inside the container it listens on 0.0.0.0, so a token is required.
+x-common: &common
+  build: .
+  env_file: .env
+  volumes: ["govcon-data:/data", "./config:/app/config"]
+  restart: unless-stopped
+services:
+  daemon:            # runs the daily discovery on the profile schedule
+    <<: *common
+    command: ["node", "bin/govcon.mjs", "daemon"]
+  ui:                # local web UI
+    <<: *common
+    command: ["node", "bin/govcon.mjs", "serve"]
+    environment:
+      GOVCON_UI_TOKEN: ${GOVCON_UI_TOKEN:?set GOVCON_UI_TOKEN in .env to a long random string}
+    ports: ["127.0.0.1:8787:8787"]
+volumes:
+  govcon-data:
