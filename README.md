@@ -31,7 +31,13 @@ Capture teams spend hours each week combing SAM.gov, forecasts and award data. T
 |---|---|---|
 | ![](docs/images/ui-opportunities.png) | ![](docs/images/ui-detail.png) | ![](docs/images/ui-ask.png) |
 
-A sample report is in [examples/GovCon_Pipeline_DEMO.xlsx](examples/GovCon_Pipeline_DEMO.xlsx) (synthetic).
+### The daily Excel report
+
+Every run writes a 7-sheet workbook. These images are HTML renderings of the synthetic sample workbook ([examples/GovCon_Pipeline_DEMO.xlsx](examples/GovCon_Pipeline_DEMO.xlsx)), not native Excel screenshots.
+
+| 01 Executive Summary | 06 Capture Priorities | 04 Recompetes |
+|---|---|---|
+| ![Executive summary sheet](docs/images/report-executive-summary.png) | ![Capture priorities sheet](docs/images/report-capture-priorities.png) | ![Recompetes sheet](docs/images/report-recompetes.png) |
 
 ## Quick start
 
