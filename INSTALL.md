@@ -11,7 +11,7 @@ Tested: macOS (Apple Silicon), Node 24. **Linux, Windows and Docker are supporte
 ## Steps
 
 ```bash
-git clone https://github.com/junwalla73/govcon-intelligence-agent.git
+git clone https://github.com/jango-labs/govcon-intelligence-agent.git
 cd govcon-intelligence-agent
 npm install
 npm run demo

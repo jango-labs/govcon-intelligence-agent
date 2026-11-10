@@ -3,7 +3,7 @@ import { createHash } from 'node:crypto';
 import type { Db } from '../db.ts';
 import { logger, redactText } from './log.ts';
 
-export const USER_AGENT = 'govcon-intelligence-agent/1.0 (+https://github.com/junwalla73/govcon-intelligence-agent; open-source research tool)';
+export const USER_AGENT = 'govcon-intelligence-agent/1.0 (+https://github.com/jango-labs/govcon-intelligence-agent; open-source research tool)';
 const lastCall = new Map<string, number>();
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 

@@ -38,7 +38,7 @@ A sample report is in [examples/GovCon_Pipeline_DEMO.xlsx](examples/GovCon_Pipel
 Requires **Node.js 24 or newer** (uses the built-in `node:sqlite`; no database server).
 
 ```bash
-git clone https://github.com/junwalla73/govcon-intelligence-agent.git
+git clone https://github.com/jango-labs/govcon-intelligence-agent.git
 cd govcon-intelligence-agent
 npm install
 npm run demo        # synthetic data, no network, no credentials
