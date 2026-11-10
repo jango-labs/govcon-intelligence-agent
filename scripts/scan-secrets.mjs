@@ -17,7 +17,7 @@ const PATTERNS = [
   ['absolute home path', /\/(?:Users|home)\/[a-z0-9._-]+\/(?!you\b|name\b|<)/i],
   ['macOS volume path', /\/Volumes\/[A-Za-z0-9 ._-]+\//],
   ['private IPv4', /\b(?:10\.\d{1,3}|192\.168|172\.(?:1[6-9]|2\d|3[01]))\.\d{1,3}\.\d{1,3}\b/],
-  ['email address', /\b[A-Za-z0-9._%+-]+@(?!users\.noreply\.github\.com|example\.(?:com|org)|anthropic\.com)[A-Za-z0-9.-]+\.[a-z]{2,}\b/i],
+  ['email address', /\b[A-Za-z0-9._%+-]+@(?!users\.noreply\.github\.com|github\.com|example\.(?:com|org)|anthropic\.com)[A-Za-z0-9.-]+\.[a-z]{2,}\b/i],
 ];
 // Project-specific words that must never appear (extend locally via GOVCON_SCAN_EXTRA="word1,word2").
 const WORDS = ['unissant', 'nextstage', 'govwin', 'g2x', 'jangounwalla', ...(process.env.GOVCON_SCAN_EXTRA ?? '').split(',').filter(Boolean)];
